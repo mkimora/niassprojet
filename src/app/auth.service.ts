@@ -1,19 +1,31 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
 
 
 @Injectable()
 export class AuthService {
 
-  private _ajoutUrl = "http://localhost:8000/api/register";
+  //private _ajoutUrl = "http://localhost:8000/api/register";
   private _loginUrl = "http://localhost:8000/api/login";
 
-  constructor(private http: HttpClient,
-                private _router:Router) { }
+  constructor(private http: HttpClient) { }
 
-  ajoutUser(user) {
-    return this.http.post<any>(this._ajoutUrl, user)
+  ajoutUser(User) {
+    const endpoint = 'http://localhost:8000/register';
+    const formData: FormData = new FormData();
+    formData.append('username',User.username);
+    formData.append('role',User.role);
+    formData.append('plainpassword',User.plainpassword);
+    formData.append('adresse',User.adresse);
+    formData.append('nomcomplet',User.nomcomplet);
+    formData.append('image',User.image);
+    formData.append('etat',User.etat);
+    formData.append('email',User.roles);
+    formData.append('partenaire_id',User.partenaire);
+    formData.append('compte_id',User.compte);
+
+    return this.http.post(endpoint, formData);
+   //return this.http.post<any>(this._userUrl, user)  
   }
   
   loginUser(user) {
@@ -26,12 +38,13 @@ export class AuthService {
 
   logoutUser() {
     localStorage.removeItem('token')
-    this._router.navigate(['/events'])
   }
 
   getToken() {
     return localStorage.getItem('token')
   }
+
+  
 }
 
  

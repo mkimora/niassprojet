@@ -13,8 +13,10 @@ import { LoginComponent } from './login/login.component';
 import { ListeComponent } from './liste/liste.component';
 import { AjoutComponent } from './ajout/ajout.component';
 import { AuthService } from './auth.service';
+import { ListeService } from './liste.service';
 import { TokenInterceptorService } from './token-interceptor.service';
-import { UploadImageComponent } from './upload-image/upload-image.component';
+import { AjoutpartenaireComponent } from './ajoutpartenaire/ajoutpartenaire.component';
+import { ListeuserComponent } from './listeuser/listeuser.component';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
     LoginComponent,
     ListeComponent,
     AjoutComponent,
-    UploadImageComponent
+    AjoutpartenaireComponent,
+    ListeuserComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [AuthService,
+  providers: [AuthService, ListeService,
   {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,

@@ -1,3 +1,37 @@
-<p>
-  liste works!
-</p>
+<div class="row mt-5">
+  <div class="col-md-4 mb-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <table class="tab-primary">
+          <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nom Complet</th>
+                <th scope="col">Adresse</th>
+                <th scope="col">Raison Sociale</th>
+                <th scope="col">Ninea</th>
+                <th scope="col">Etat</th>
+                <th scope="col">Telephone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let partenaire of partenaires">
+                <td>{{partenaire.id}}</td>
+                <td>{{partenaire.nomCompletU}}</td>
+                <td>{{partenaire.adresseU}}</td>
+                <td>{{partenaire.raisonSociale}}</td>
+                <td>{{partenaire.ninea}}</td>
+                <td>{{partenaire.etatU}}</td>
+                <td>{{partenaire.telephone}}</td>
+                <td>{{partenaire.email}}</td>
+                <td>{{partenaire.username}}</td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

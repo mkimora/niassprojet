@@ -4,13 +4,20 @@ import { ListeComponent } from './liste/liste.component';
 import { LoginComponent } from './login/login.component';
 import { AjoutComponent } from './ajout/ajout.component';
 import { NavComponent } from './nav/nav.component';
+import { AjoutpartenaireComponent } from './ajoutpartenaire/ajoutpartenaire.component';
+import { ListeuserComponent } from './listeuser/listeuser.component';
+
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
   { path: 'lister', component: ListeComponent },
   { path: 'ajout', component: AjoutComponent },
-  { path: '', component: NavComponent },
+  { path: 'ajoutpartenaire', component: AjoutpartenaireComponent },
+  { path: 'listeuser', component: ListeuserComponent },
+
+
+  // { path: 'acceuil', component: NavComponent },
 
 
 ];

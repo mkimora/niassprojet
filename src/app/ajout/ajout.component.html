@@ -7,45 +7,55 @@
        <div class="card-body">
          <form class="form">
            <div class="form-group">
-             <label for="">Username</label>
-             <input name="ajout" type="text" class="form-control rounded-0" required>
+             <label for=""><h5>Username</h5></label>
+             <input name="username" type="text"  class="form-control rounded-0" required>
            </div>
            <div class="form-group">
-             <label for="">Role</label>
-             <input type="number"  name="role" [(ngModel)]="loginUserData.role"  class="form-control rounded-0" required>
+             <label for=""><h5>Role</h5></label>
+             <input name="role" type="number"  class="form-control rounded-0" required>
            </div>
           <div class="form-group">
-            <label for="">PlainPassword</label>
-            <input name="ajout" type="password" [(ngModel)]="loginUserData.password" class="form-control rounded-0" required>
+            <label for=""><h5>PlainPassword</h5></label>
+            <input name="plainpassword" type="password"  class="form-control rounded-0" required>
           </div>
           <div class="form-group">
-            <label for="">Adresse</label>
-            <input name="adresse" type="text" [(ngModel)]="loginUserData.adresse" class="form-control rounded-0" required>
+            <label for=""><h5>Adresse</h5></label>
+            <input name="adresse" type="text"  class="form-control rounded-0" required>
           </div>
           <div class="form-group">
-            <label for="">Nom</label>
-            <input name="nom" type="text" [(ngModel)]="loginUserData.nom" class="form-control rounded-0" required>
+            <label for=""><h5>Nom Complet</h5></label>
+            <input name="nomcomplet" type="text"  class="form-control rounded-0" required>
+          </div> 
+          <div class="container">
+            <div class="row">
+              <div class="col s8 offset-2">
+                <div class="card-panel teal lighten-2">
+                  <h4 class="center white-text"><h5>Image</h5></h4>
+                </div>
+                  <img [src]="imageUrl"  style="width:250px;height:200px" alt="">
+                  <input type="file" #image accept="image/*" (change)="handleFileInput($event.target.files)" >
+              </div>
+            </div>
           </div>
           <div class="form-group">
-            <label for="">Prénom</label>
-            <input name="prenom" type="text" [(ngModel)]="loginUserData.prenom" class="form-control rounded-0" required>
+            <label for=""><h5>Etat</h5></label>
+            <input name="etat" type="text"  class="form-control rounded-0" required>
           </div>
           <div class="form-group">
-            <label for="">Image</label>
-            <input name="image" id="image" type="image" alt="Login" [(ngModel)]="loginUserData.image"  class="form-control rounded-0" required>
+            <label for=""><h5>Email</h5></label>
+            <input name="email" type="email"  class="form-control rounded-0" required>
           </div>
           <div class="form-group">
-            <label for="">Partenaire id</label>
-            <input name="partenaire" type="number" [(ngModel)]="loginUserData.partenaire" class="form-control rounded-0" required>
+            <label for=""><h5>Partenaire id</h5></label>
+            <input name="partenaire_id" type="number"  class="form-control rounded-0" required>
           </div>
           <div class="form-group">
-            <label for="">Compte id</label>
-            <input name="compte" type="number" [(ngModel)]="loginUserData.compte" class="form-control rounded-0" required>
+            <label for=""><h5>Compte id</h5></label>
+            <input name="compte_id" type="number"  class="form-control rounded-0" required>
           </div>
-           <button (click)="ajoutUser()" type="button" class="btn btn-primary float-right">Ajouter</button>
-         </form>
+          <button (click)="ajoutUser()" type="Ajout" class="btn-large btn-submit">Ajouter</button>
+        </form>
        </div>
     </div>
   </div>
 </div>
-<app-nav></app-nav>
