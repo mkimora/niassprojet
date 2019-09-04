@@ -33,12 +33,14 @@ export class AjoutComponent implements OnInit {
   }
 
   ajoutUser() {
-    this._auth.ajoutUser(this.ajoutUserData)
+    console.log(this.ajoutUserData)
+    this._auth.ajoutUser(this.ajoutUserData,this.fileToUpload)
       .subscribe(
         res => { 
           console.log(res)
-          localStorage.setItem('token', res.token)
-          this._router.navigate(['/special'])
+       //   localStorage.setItem('token', res.token)
+          this._router.navigate(['/ajout'])
+
         },
         err => console.log(err)
       )

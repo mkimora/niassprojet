@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -14,9 +14,10 @@ import { ListeComponent } from './liste/liste.component';
 import { AjoutComponent } from './ajout/ajout.component';
 import { AuthService } from './auth.service';
 import { ListeService } from './liste.service';
-import { TokenInterceptorService } from './token-interceptor.service';
 import { AjoutpartenaireComponent } from './ajoutpartenaire/ajoutpartenaire.component';
 import { ListeuserComponent } from './listeuser/listeuser.component';
+import { DepotComponent } from './depot/depot.component';
+
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ListeuserComponent } from './listeuser/listeuser.component';
     AjoutComponent,
     AjoutpartenaireComponent,
     ListeuserComponent,
+    DepotComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,12 +37,7 @@ import { ListeuserComponent } from './listeuser/listeuser.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [AuthService, ListeService,
-  {
-      provide: HTTP_INTERCEPTORS,
-      useClass: TokenInterceptorService,
-      multi: true
-  }],
+  providers: [AuthService, ListeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

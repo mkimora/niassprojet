@@ -6,15 +6,18 @@ import { AjoutComponent } from './ajout/ajout.component';
 import { NavComponent } from './nav/nav.component';
 import { AjoutpartenaireComponent } from './ajoutpartenaire/ajoutpartenaire.component';
 import { ListeuserComponent } from './listeuser/listeuser.component';
+import { DepotComponent } from './depot/depot.component';
 
 
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'lister', component: ListeComponent },
-  { path: 'ajout', component: AjoutComponent },
-  { path: 'ajoutpartenaire', component: AjoutpartenaireComponent },
+  { path: 'register', component: AjoutComponent },
+  { path: 'partenaire', component: AjoutpartenaireComponent },
   { path: 'listeuser', component: ListeuserComponent },
+  { path: 'operation', component: DepotComponent },
+
 
 
   // { path: 'acceuil', component: NavComponent },
