@@ -7,6 +7,8 @@ import { NavComponent } from './nav/nav.component';
 import { AjoutpartenaireComponent } from './ajoutpartenaire/ajoutpartenaire.component';
 import { ListeuserComponent } from './listeuser/listeuser.component';
 import { DepotComponent } from './depot/depot.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { HistoriquecComponent } from './historiquec/historiquec.component';
 
 
 
@@ -17,6 +19,10 @@ const routes: Routes = [
   { path: 'partenaire', component: AjoutpartenaireComponent },
   { path: 'listeuser', component: ListeuserComponent },
   { path: 'operation', component: DepotComponent },
+  { path: 'acceuil', component: AcceuilComponent },
+  { path: 'historique', component: HistoriquecComponent },
+
+
 
 
 

@@ -17,6 +17,8 @@ import { ListeService } from './liste.service';
 import { AjoutpartenaireComponent } from './ajoutpartenaire/ajoutpartenaire.component';
 import { ListeuserComponent } from './listeuser/listeuser.component';
 import { DepotComponent } from './depot/depot.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { HistoriquecComponent } from './historiquec/historiquec.component';
 
 
 
@@ -30,6 +32,8 @@ import { DepotComponent } from './depot/depot.component';
     AjoutpartenaireComponent,
     ListeuserComponent,
     DepotComponent,
+    AcceuilComponent,
+    HistoriquecComponent,
   ],
   imports: [
     BrowserModule,

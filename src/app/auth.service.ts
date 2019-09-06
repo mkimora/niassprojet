@@ -7,8 +7,10 @@ import { Router } from '@angular/router';
 @Injectable()
 export class AuthService {
 
-  
+ 
   private _loginUrl = "http://localhost:8000/api/login";
+  //private _depotUrl = "http://localhost:8000/api/operation";
+
 
   constructor(private http: HttpClient,
               private _router: Router) { }
@@ -35,24 +37,33 @@ export class AuthService {
   }
 
   ajoutParte(partenaire) {
-    var headers = new HttpHeaders().set("Authorization","Bearer" + localStorage.getItem('token'));
+    var headers = new HttpHeaders().set("Authorization","Bearer " + localStorage.getItem('token'));
     const endpoint = "http://localhost:8000/api/partenaire";
     const formData : FormData = new FormData();
-    formData.append('nomCompletU',partenaire.nomCompletU);
+    formData.append('nomCompletU',partenaire.nomcomplet);
     formData.append('adresseU',partenaire.adresseU);
     formData.append('raisonSociale',partenaire.raisonSociale);
     formData.append('ninea',partenaire.ninea);
-    formData.append('etatU',partenaire.etatU);
+   // formData.append('etatU',partenaire.etatU);
     formData.append('telephone',partenaire.telephone);
     formData.append('email',partenaire.email);
     formData.append('username',partenaire.username);
-    formData.append('roleId',partenaire.roleId);
-
+    console.log(formData.getAll)
     return this.http.post(endpoint, formData , {headers:headers});
 
 
   }
   
+  depot(depot) {
+    var headers = new HttpHeaders().set("Authorization","Bearer " + localStorage.getItem('token'));
+    const endpoint = "http://localhost:8000/api/operation";
+    const formData : FormData = new FormData();
+    formData.append('compte',depot.Compte);
+    formData.append('nouveauSolde',depot.nouveauSolde);
+    console.log(formData.getAll)
+    return this.http.post(endpoint, formData , {headers:headers});
+
+  }
   
   loginUser(user) {
     return this.http.post<any>(this._loginUrl, user)
@@ -71,6 +82,13 @@ export class AuthService {
     return localStorage.getItem('token')
   }
 
+  // depot() {
+  //   this._auth.depot(this.depotData)
+  //     .subscribe(
+  //       res => console.log(res),
+  //       err => console.log(err)
+  //     )
+  // }
   
 }
 

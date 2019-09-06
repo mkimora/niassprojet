@@ -1,3 +1,27 @@
-<p>
-  depot works!
-</p>
+<app-nav></app-nav>
+<div class="container" style="width: 750px; margin: 0 auto;">
+<div class="row pt-5">
+  <div class="col-md-6 mx-auto">
+    <div class="card rounded-0">
+      <div class="card-header">
+        <h3 class="mb-0">Dépôt d'argent</h3>
+      </div>
+       <div class="card-body">
+         <form class="form">
+           <div class="form-group">
+             <label for=""><h5>Compte</h5></label>
+             <input [(ngModel)]="depotData.Compte" name="Compte" type="number"  class="form-control rounded-0" required>
+           </div>
+           <div class="form-group">
+             <label for=""><h5>Nouveau Solde</h5></label>
+             <input [(ngModel)]="depotData.nouveauSolde" name="nouveauSolde" type="number"  class="form-control rounded-0" required>
+           </div> 
+          <button (click)="depot()" type="button" class="btn-large btn-submit">Déposer</button>
+        </form>
+       </div>
+    </div>
+  </div>
+</div>
+</div>
+
+

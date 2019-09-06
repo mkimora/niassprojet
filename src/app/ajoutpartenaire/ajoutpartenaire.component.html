@@ -1,3 +1,4 @@
+<app-nav></app-nav>
 <div class="row pt-5">
   <div class="col-md-6 mx-auto">
     <div class="card rounded-0">
@@ -12,20 +13,20 @@
            </div>
            <div class="form-group">
              <label for=""><h5>Adresse</h5></label>
-             <input [(ngModel)]="ajoutParteData.adresse" name="adresse" type="text"  class="form-control rounded-0" required>
+             <input [(ngModel)]="ajoutParteData.adresseU" name="adresseU" type="text"  class="form-control rounded-0" required>
            </div>
           <div class="form-group">
             <label for=""><h5>Raison Sociale</h5></label>
-            <input [(ngModel)]="ajoutParteData.raisonsociale" name="raisonsociale" type="text"  class="form-control rounded-0" required>
+            <input [(ngModel)]="ajoutParteData.raisonSociale" name="raisonSociale" type="text"  class="form-control rounded-0" required>
           </div>
           <div class="form-group">
             <label for=""><h5>Ninea</h5></label>
             <input [(ngModel)]="ajoutParteData.ninea" name="ninea" type="number"  class="form-control rounded-0" required>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for=""><h5>Etat</h5></label>
             <input name="etat" type="text"  class="form-control rounded-0" required>
-          </div> 
+          </div>  -->
           <div class="form-group">
             <label for=""><h5>Telephone</h5></label>
             <input [(ngModel)]="ajoutParteData.telephone"  name="telephone" type="number"  class="form-control rounded-0" required>
