@@ -16,7 +16,7 @@
               <h3 class="mb-0">Authentification</h3>
             </div>
              <div class="card-body">
-               <form class="form">
+               <form #f="ngForm" (ngSubmit)="onLogin(f.value)" >
                  <div class="form-group">
                    <label for=""><h5>Username</h5></label>
                    <input name="username" [(ngModel)]="loginUserData.username" type="text" class="form-control rounded-0" required>

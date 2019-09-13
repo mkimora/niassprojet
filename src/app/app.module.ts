@@ -19,6 +19,9 @@ import { ListeuserComponent } from './listeuser/listeuser.component';
 import { DepotComponent } from './depot/depot.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { HistoriquecComponent } from './historiquec/historiquec.component';
+import { BloquerComponent } from './bloquer/bloquer.component';
+import { EnvoiComponent } from './envoi/envoi.component';
+import { RetraitComponent } from './retrait/retrait.component';
 
 
 
@@ -34,6 +37,9 @@ import { HistoriquecComponent } from './historiquec/historiquec.component';
     DepotComponent,
     AcceuilComponent,
     HistoriquecComponent,
+    BloquerComponent,
+    EnvoiComponent,
+    RetraitComponent,
   ],
   imports: [
     BrowserModule,

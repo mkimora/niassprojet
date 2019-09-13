@@ -39,7 +39,7 @@ export class AjoutComponent implements OnInit {
         res => { 
           console.log(res)
        //   localStorage.setItem('token', res.token)
-          this._router.navigate(['/ajout'])
+          //this._router.navigate(['/ajout'])
 
         },
         err => console.log(err)

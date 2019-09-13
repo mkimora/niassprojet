@@ -9,24 +9,23 @@
 <body>
     <header>
         <div class="container">
-          <a routerLink="/" class="logo">KiTRANSFERT</a>
+          <a *ngIf="!isAuthenticated()" routerLink="/" class="logo"></a>
+          <a *ngIf="isAuthenticated()" (click)="logOut()" class="logo">Logout</a>
+
           <nav>
             <ul>
-              <li><a routerLink="/acceuil">Acceuil</a></li>
-              <li><a routerLink="/register">Ajout User</a></li>
-              <li><a routerLink="/listeuser">Liste User</a></li>
-              <li><a routerLink="/lister">Liste Partenaire</a></li>
-              <li><a routerLink="/partenaire">Ajout Partenaire</a></li>
-              <li><a routerLink="/operation">Dépôt</a></li>
-              <li><a routerLink="/historique">Historique</a></li>
-
-    
-    
+              <li><a *ngIf="isADMIN()" routerLink="/register">Ajout User</a></li>
+              <li><a *ngIf="isSUPERADMIN() " routerLink="/partenaire">Ajout Partenaire</a></li>
+              <li><a *ngIf="isADMIN()" routerLink="/listeuser">Liste User</a></li>
+              <li><a *ngIf="isSUPERADMIN()" routerLink="/lister">Liste Partenaire</a></li>
+              <li><a *ngIf="isUser()" routerLink="/envoi">Envoyer</a></li>
+              <li><a *ngIf="isUser()" routerLink="/retrait">Retrait</a></li>
+              <li><a *ngIf="isCaissier()" routerLink="/depot">Dépôt</a></li>
             </ul>
           </nav>
         </div>
       </header>
-    
+     
 </body>
 </html>
 

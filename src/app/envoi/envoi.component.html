@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Envoi</title>
+</head>
+<body>
+  <div class="container" style="width: 750px; margin: 0 auto;">
+    <div class="center">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card rounded-0">
+            <div class="card-header">
+              <h3 class="mb-0">Envoi</h3>
+            </div>
+             <div class="card-body">
+              <form class="form">
+                <div class="form-group">
+                   <label for=""><h5>Nom Envoyeur</h5></label>
+                   <input name="nom" [(ngModel)]="envoiUserData.nom" type="text" class="form-control rounded-0" required>
+                 </div>
+                 <div class="form-group">
+                   <label for=""><h5>Prenom Envoyeur</h5></label>
+                   <input type="text"  name="prenome" [(ngModel)]="envoiUserData.prenome"  class="form-control rounded-0" required>
+                 </div>
+                 <div class="form-group">
+                  <label for=""><h5>Telephone Envoyeur</h5></label>
+                  <input type="number"  name="telephone" [(ngModel)]="envoiUserData.telephone"  class="form-control rounded-0" required>
+                </div> 
+                 <div class="form-group">
+                  <label for=""><h5>Nom Beneficiaire</h5></label>
+                  <input type="text"  name="nomb" [(ngModel)]="envoiUserData.nomb" class="form-control rounded-0" required>
+                </div> 
+                 <div class="form-group">
+                  <label for=""><h5>Prenom Beneficiaire</h5></label>
+                  <input type="text"  name="prenomb" [(ngModel)]="envoiUserData.prenomb" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                  <label for=""><h5>Telephone Beneficiaire</h5></label>
+                  <input type="number"  name="telephoneb" [(ngModel)]="envoiUserData.telephoneb" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                  <label for=""><h5>Montant</h5></label>
+                  <input type="number"  name="montant" [(ngModel)]="envoiUserData.montant" class="form-control rounded-0" required>
+                </div>
+                 <button (click)="envoiUser()" type="button" class="btn btn-primary float-right ">Envoyer</button>
+               </form>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -9,6 +9,8 @@ import { ListeuserComponent } from './listeuser/listeuser.component';
 import { DepotComponent } from './depot/depot.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { HistoriquecComponent } from './historiquec/historiquec.component';
+import { BloquerComponent } from './bloquer/bloquer.component';
+import { EnvoiComponent } from './envoi/envoi.component';
 
 
 
@@ -18,9 +20,13 @@ const routes: Routes = [
   { path: 'register', component: AjoutComponent },
   { path: 'partenaire', component: AjoutpartenaireComponent },
   { path: 'listeuser', component: ListeuserComponent },
-  { path: 'operation', component: DepotComponent },
+  { path: 'depot', component: DepotComponent },
   { path: 'acceuil', component: AcceuilComponent },
   { path: 'historique', component: HistoriquecComponent },
+  { path: 'bloquer', component: BloquerComponent },
+  { path: 'envoi', component: EnvoiComponent },
+
+
 
 
 
